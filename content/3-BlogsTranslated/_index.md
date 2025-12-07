@@ -6,20 +6,20 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-<!-- {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}} -->
-
 This section will list and introduce the blogs you have translated. For example:
 
-### [Blog 1 – Deploying a High Performance Computing solution for accurate weather and renewable energy production predictions](3.1-Blog1/)
-This blog explains how Iberdrola deploys a high-performance computing (HPC) cluster on AWS to improve weather forecasting accuracy and renewable energy production predictions. The article walks through business motivations, MeteoFlow’s evolution, data requirements, cloud migration, HPC architecture, and AWS services that enable large-scale meteorological simulations and ML-based forecasting.
+### [Blog 1 - Visually build telephony applications with AWS Step Functions](3.1-Blog1/)
+This blog demonstrates how combining AWS Step Functions and the Amazon Chime SDK’s PSTN audio service simplifies the development of reliable telephony applications through visual workflow design and error management. We provided a sample application, implementing six core features for business telephony, illustrating how this solution effectively manages multiple conditional paths and exceptions such as disconnects and invalid inputs. The serverless architecture created enables seamless integration between the two services via JSON-based communication, providing automatic scaling
 
 
-###  [Blog 2 - Showcasing Your AWS Achievements with the New Skills Profile](3.2-Blog2/)
-This blog introduces Skills Profile, a new feature in AWS Skill Builder that allows learners to compile, manage, and share all their AWS certifications and achievements in a single profile. The tool helps showcase skills in a professional and verifiable way, making it ideal for sharing on platforms like LinkedIn or in job applications. As a result, learners can enhance their credibility, expand their network, and create more career opportunities in the cloud computing field.
+###  [Blog 2 - Visualize and gain insights into your VPC with Amazon Q in Amazon QuickSight](3.2-Blog2/)
+In this article, you learned how to use Amazon QuickSight to visualize data from multiple data sources using natural language queries. Amazon Q in QuickSight helps democratize data access, empowering everyone in your organization to make data-driven decisions. Organizing data into visual topics and enabling natural language querying allows Amazon Q users to better understand VPC flows. To help your team get started with QuickSight, we recommend reviewing the following guides: *What is Amazon QuickSight Q* and *Best Practices for QuickSight Q Authors*.
 
-###  [Blog 3 - How DTN accelerates operational weather prediction using NVIDIA Earth-2 on AWS](3.3-Blog3/)
-This blog describes how DTN uses NVIDIA Earth-2 on AWS to accelerate operational weather forecasting with AI models, especially for predicting and tracking cyclones. By deploying AI models like FourCastNet on AWS services such as AWS Batch, GPU-powered EC2 instances, Step Functions, and S3, DTN can generate forecasts orders of magnitude faster than traditional physics-based models while improving accuracy and scalability. This solution helps businesses reduce risk, optimize operations, and make better decisions during extreme weather events.
+###  [Blog 3 - Validate Your Lambda Runtime with CloudFormation Lambda Hooks](3.3-Blog3/)
+In this article, you learned how to implement CloudFormation Hooks to ensure compliance with Lambda runtime across your entire AWS infrastructure. By leveraging the power of Lambda Hooks, you learned how to create a preventive control mechanism to validate Lambda runtime configurations before deployment.
+
+By enabling Lambda Hooks and deploying a custom Lambda function for validation, you have established an automated process that ensures only compliant runtimes are used in your organization's Lambda functions when creating or updating CloudFormation Stacks. This solution can be easily integrated with popular development tools like AWS CLI, AWS SAM, CI/CD pipelines, and AWS CDK, helping streamline control implementation in your current workflows and eliminating the need for manual checks or post-deployment fixes.
+
+The validation method presented in this article is not limited to Lambda runtimes but can be extended to other AWS resources supported by CloudFormation, enabling you to enforce governance policies across various infrastructure components in your AWS environment.
 
 
