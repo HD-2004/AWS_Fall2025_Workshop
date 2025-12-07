@@ -7,15 +7,15 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Trần Phát Đạt
+&emsp; **Họ và tên:** Đỗ Hoàng Hiếu
 
-&emsp; **Số điện thoại:** 0985817735
+&emsp; **Số điện thoại:** 0773780253
 
-&emsp; **Email:** dattpse182773@fpt.edu.vn
+&emsp; **Email:** hieudhse184340@fpt.edu.vn
 
 &emsp; **Trường:** Đại học FPT
 
-&emsp; **Ngành:** Kỹ thuật phần mềm
+&emsp; **Ngành:** An Toàn Thông Tin
 
 &emsp; **Lớp:** AWS082025
 
@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 08/09/2025 đến ngày 04/12/2025
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![Ảnh đại diện của bạn](/images/avatar.jpg)
 
 
 

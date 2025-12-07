@@ -7,21 +7,16 @@ chapter: false
 
     
 # Internship Report
-
-<!-- {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}} -->
-
 ### Student Information:
-&emsp; **Full Name:** Trần Phát Đạt
+&emsp; **Full Name:** Đỗ Hoàng Hiếu
 
-&emsp; **Phone Number:** 0985817735
+&emsp; **Phone Number:** 0773780253
 
-&emsp; **Email:** dattpse182773@fpt.edu.vn
+&emsp; **Email:** hieudhse184340@fpt.edu.vn
 
 &emsp; **University:** FPT University
 
-&emsp; **Major:** Software Engineering
+&emsp; **Major:** Information Assurance
 
 &emsp; **Class:** AWS082025
 
@@ -31,7 +26,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 08/09/2025 to 04/12/2025
 
-![Your profile picture](/images/avatar.png)
+![Your profile picture](/images/avatar.jpg)
 
 ### Report Content
 
