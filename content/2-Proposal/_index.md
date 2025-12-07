@@ -5,10 +5,6 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-<!-- {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** for your report, including this warning.
-{{% /notice %}} -->
-
 This section summarizes the contents of the workshop you **plan** to conduct.
 
 # Studying English Website
@@ -99,4 +95,3 @@ Or download [budget estimation file](../attachments/budget_estimation.pdf).
 ### 8. Expected Outcomes  
 *Technical Improvement*: Real-time data and analytics replace manual processes. Scalable to 10–15 stations.  
 *Long-term Value*: One-year data platform for AI research, reusable for future projects.
-

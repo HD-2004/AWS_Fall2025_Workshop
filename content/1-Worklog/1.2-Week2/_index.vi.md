@@ -1,4 +1,3 @@
-
 ---
 title: "Worklog Tuần 2"
 date: 2025-09-16
@@ -6,11 +5,6 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-<!-- {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}} -->
-
-
 ### Mục tiêu tuần 2:
 
 * Tìm hiểu về dịch vụ mạng AWS.
@@ -41,6 +35,3 @@ pre: " <b> 1.2. </b> "
   * VPC Peering & Transit Gateway: VPC Peering kết nối trực tiếp hai VPC bằng IP private, đơn giản nhưng không hỗ trợ định tuyến bắc cầu, còn Transit Gateway là trung tâm kết nối nhiều VPC và on-premises, hỗ trợ định tuyến bắc cầu, mở rộng và quản lý tập trung.
   * VPN & Direct Connect: VPN kết nối mạng on-premises với AWS qua Internet bằng đường hầm mã hóa, dễ triển khai nhưng độ trễ và băng thông phụ thuộc Internet; Direct Connect kết nối chuyên dụng từ on-premises đến AWS, ổn định, băng thông cao, độ trễ thấp nhưng chi phí cao và triển khai lâu hơn.
   * Elastic Load Balancing: là dịch vụ phân phối tự động lưu lượng đến nhiều tài nguyên để tăng tính sẵn sàng, mở rộng và chịu lỗi, gồm ALB (HTTP/HTTPS), NLB (TCP/UDP hiệu năng cao) và GWLB (thiết bị mạng ảo).
-
-
-
