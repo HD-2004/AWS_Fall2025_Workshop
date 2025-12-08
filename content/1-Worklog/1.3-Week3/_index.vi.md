@@ -1,4 +1,3 @@
-
 ---
 title: "Worklog Tuần 3"
 date: 2025-09-16
@@ -6,10 +5,6 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-<!-- {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}} -->
-
 
 ### Mục tiêu tuần 3:
 
@@ -37,5 +32,3 @@ pre: " <b> 1.3. </b> "
   * AWS Application Migration Service: dùng để migrate và replicate phục vụ mục đích xây dựng Disaster Recovery Site cho các máy chủ thực, ảo lên môi trường AWS, liên tục sao chép các máy chủ nguồn sang EC2 Instance trên tài khoản AWS (asynchronous / synchronous ).
 
 * Thành công triển khai AWS Backup, File Storage Gateway và Autoscaling group.
-
-

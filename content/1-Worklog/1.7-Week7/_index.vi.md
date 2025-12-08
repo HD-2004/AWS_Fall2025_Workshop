@@ -1,4 +1,3 @@
-
 ---
 title: "Worklog Tuần 7"
 date: 2025-09-16
@@ -6,11 +5,6 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-<!-- {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}} -->
-
-
 ### Mục tiêu tuần 7:
 
 * Làm các bài lab từ module 6.
@@ -31,4 +25,3 @@ pre: " <b> 1.7. </b> "
 * Thành công làm xong bài lab module 6
 
 * Đang có tiến triển tốt trong Nghiên cứu và làm project nhóm
-

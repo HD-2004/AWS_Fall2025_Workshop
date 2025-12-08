@@ -1,4 +1,3 @@
-
 ---
 title: "Week 4 Worklog"
 date: 2025-09-16
@@ -6,11 +5,6 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-<!-- {{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}} -->
-
-
 ### Week 4 Objectives:
 
 * Discuss and brainstorm project ideas with the group.
@@ -24,7 +18,6 @@ pre: " <b> 1.4. </b> "
 | 4   | - Perform Lab on AWS storage services. <br>  - **Practice:** <br>&emsp; + VM Import/Export <br>&emsp; + Deploy File Storage Gateway <br>  | 09/24/2025 | 09/25/2025      | <https://000014.awsstudygroup.com/vi> <https://000024.awsstudygroup.com/vi> |
 | 5   |  - Perform Lab on AWS storage services. <br>  - **Practice:** <br>&emsp; + VM Import/Export <br>&emsp; + Deploy File Storage Gateway <br>  | 09/24/2025 | 09/25/2025      | <https://000014.awsstudygroup.com/vi> <https://000024.awsstudygroup.com/vi> |
 | 6   | - Group meeting about project ideas and writing worklog                                                                                     | 09/26/2025 | 09/26/2025      |  |
-
 
 ### Week 4 Achievements:
 

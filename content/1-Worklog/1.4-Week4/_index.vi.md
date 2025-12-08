@@ -1,4 +1,3 @@
-
 ---
 title: "Worklog Tuần 4"
 date: 2025-09-16
@@ -6,11 +5,6 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-<!-- {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}} -->
-
-
 ### Mục tiêu tuần 4:
 
 * Suy nghĩ và họp nhóm về ý tưởng project.
@@ -36,4 +30,3 @@ pre: " <b> 1.4. </b> "
 
 * Thành công import/export VM và triển Khai File Storage Gateway  
 * Hoàn thành viết worklog và thống nhất chung project
-

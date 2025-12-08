@@ -1,4 +1,3 @@
-
 ---
 title: "Week 3 Worklog"
 date: 2025-09-16
@@ -6,11 +5,6 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-<!-- {{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}} -->
-
-
 ### Week 3 Objectives:
 
 * Learn about Compute VM services on AWS.
@@ -37,4 +31,3 @@ pre: " <b> 1.3. </b> "
   * AWS Application Migration Service: used to migrate and replicate servers for building Disaster Recovery sites, continuously copying source physical or virtual servers to EC2 instances in AWS (asynchronously or synchronously).
 
 * Successfully deployed AWS Backup, File Storage Gateway, and Auto Scaling Group..
-
