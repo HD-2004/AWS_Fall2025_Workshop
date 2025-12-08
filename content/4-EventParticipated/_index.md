@@ -20,22 +20,51 @@ pre: " <b> 4. </b> "
 
 During my internship, I participated in two events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
 
-### [Event 1](4.1-Event1/)  
-&emsp;**Event Name:** AI/ML/GenAI on AWS  
+### [Event 1](4.1-Event1/)
+&emsp;**Event name:** Kick-off AWS FCJ Workforce - FPTU OJT FALL 2025
 
-&emsp;**Date & Time:** 08:30, November 15, 2025  
+&emsp;**Time:** 08:30 on 06/09/2025
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+&emsp;**Location:** 26th floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
 
-&emsp;**Role:** Attendee  
+&emsp;**Role in the event:** Attendee 
 
----
 
-### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** DevOps on AWS  
+### [Event 2](4.2-Event2/)
+&emsp;**Event name:** AI-Driven Development Life Cycle: Reimagining Software Engineering
 
-&emsp;**Date & Time:** 08:30, November 17, 2025  
+&emsp;**Time:** 14:00 on 03/10/2025
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+&emsp;**Location:** 26th floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
 
-&emsp;**Role:** Attendee
+&emsp;**Role in the event:** Attendee 
+
+
+### [Event 3](4.3-Event3/)
+&emsp;**Event name:** AI/ML/GenAI on AWS
+
+&emsp;**Time:** 8:30 on 15/11/2025
+
+&emsp;**Location:** 26th floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+
+&emsp;**Role in the event:** Attendee 
+
+
+### [Event 4](4.4-Event4/)
+&emsp;**Event name:** DevOps on AWS
+
+&emsp;**Time:** 8:30 on 17/11/2025
+
+&emsp;**Location:** 26th floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+
+&emsp;**Role in the event:** Attendee 
+
+
+### [Event 5](4.5-Event5/)
+&emsp;**Event name:** According to AWS Well-Architected Security Pillar
+
+&emsp;**Time:** 08:30 on 29/11/2025
+
+&emsp;**Location:** 26th floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+
+&emsp;**Role in the event:** Attendee

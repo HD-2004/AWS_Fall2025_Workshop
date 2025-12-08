@@ -1,91 +1,56 @@
-
 ---
 title: "Event 1"
-date: 2025-09-15
+date: 2025-09-06
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
+# Bài thu hoạch “Kick-off AWS FCJ Workforce - FPTU OJT FALL 2025” Event
 
+### Về Chương trình AWS First Cloud Journey Workforce
+​- Khởi động từ năm 2021, chương trình đã đồng hành cùng hơn 2,000 sinh viên trên khắp cả nước.
+- ​Hơn 150 học viên đã được đào tạo chuyên sâu và hiện đang làm việc tại các công ty công nghệ hàng đầu Việt Nam và quốc tế.
 
-# Bài thu hoạch “AI/ML/GenAI on AWS”
+### ​Mục tiêu chính:
 
-### Mục Đích Của Sự Kiện
+- ​Xây dựng thế hệ AWS Builders chất lượng cao cho Việt Nam.
+​- Trang bị kỹ năng thực chiến về Cloud, DevOps, AI/ML, Security, Data & Analytics.
+- ​Kết nối sinh viên với cộng đồng AWS Study Group 47,000+ thành viên và các doanh nghiệp đối tác AWS.
+- ​Chương trình không chỉ là đào tạo công nghệ, mà còn là cầu nối quan trọng giữa tri thức – công nghệ – sự nghiệp, giúp sinh viên tự tin hòa nhập vào thế giới công nghệ hiện đại và hội nhập quốc tế.
 
-- Khám phá các dịch vụ AI/ML của AWS: Cung cấp cái nhìn tổng quan về các dịch vụ AI/ML hiện có của AWS, giúp người tham gia hiểu rõ cách ứng dụng các dịch vụ này trong các dự án thực tế.
+&emsp;**Tên sự kiện:** Kick-off AWS FCJ Workforce - FPTU OJT FALL 2025
 
-- Giới thiệu về Generative AI: Tập trung vào việc ứng dụng các mô hình nền tảng và Generative AI trong môi trường AWS để xây dựng các ứng dụng thông minh.
+&emsp;**Thời gian:** 08:30 ngày 06/09/2025
 
-- Trình diễn thực tế về Generative AI: Hướng dẫn cách xây dựng chatbot sử dụng Amazon Bedrock và các kỹ thuật như prompt engineering, chain-of-thought reasoning.
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
 
-- Cung cấp kiến thức về MLOps và SageMaker: Giới thiệu các công cụ quản lý vòng đời mô hình máy học từ việc chuẩn bị dữ liệu, huấn luyện mô hình đến triển khai và giám sát.
+&emsp;**Vai trò trong sự kiện:** Người tham dự 
 
+### Diễn giả và khách mời
+- ​Đại diện Nhà trường: Thầy Nguyễn Trần Phước Bảo – Trưởng phòng Quan hệ Doanh nghiệp (QHDN) phát biểu khai mạc
+- ​Tham dự cùng 2–3 anh/chị thuộc Phòng QHDN
 
-### Nội Dung Nổi Bật
+#### ​Keynote & Industry Sharing
+- AWS First Cloud Journey & Định hướng Tương lai
+👤 Nguyễn Gia Hưng – Head of Solutions Architect, AWS Vietnam
 
-#### Giới thiệu về AI/ML tại AWS:
+- DevOps & Sự nghiệp tương lai
+👤 Đỗ Huy Thắng – DevOps Lead, VNG
 
-- Amazon SageMaker: Nền tảng máy học toàn diện giúp triển khai, huấn luyện và quản lý mô hình máy học.
+#### ​Alumni & Career Sharing
 
-- Data preparation and labeling: Các công cụ hỗ trợ chuẩn bị và gán nhãn dữ liệu.
+- Từ First Cloud Journey đến GenAI Engineer
+👤 Danh Hoàng Hiếu Nghị – GenAI Engineer, Renova
 
-- MLOps capabilities: Các tính năng tích hợp trong SageMaker để hỗ trợ quy trình vận hành mô hình (MLOps).
+- She in Tech & Hành trình cùng First Cloud Journey
+👤 Bùi Hồ Linh Nhi – AI Engineer, SoftwareOne
 
-#### Live Demo – SageMaker Studio walkthrough: Trình diễn sử dụng SageMaker Studio để phát triển và triển khai mô hình AI/ML.
+- Một ngày làm Cloud Engineer
+👤 Phạm Nguyễn Hải Anh – Cloud Engineer, G-Asia Pacific
 
-#### Generative AI with Amazon Bedrock:
+- Hành trình đến với First Cloud Journey
+👤 Nguyễn Đồng Thanh Hiệp – Principal Cloud Engineer, G-Asia Pacific
 
-- Foundation Models: Giới thiệu các mô hình nền tảng như Claude, Llama, Titan, và hướng dẫn lựa chọn mô hình phù hợp.
-
-- Prompt Engineering: Các kỹ thuật xây dựng câu lệnh để tối ưu hóa hiệu quả của các mô hình Generative AI, bao gồm Chain-of-Thought reasoning và Few-shot learning.
-
-- Retrieval-Augmented Generation (RAG): Kiến trúc và cách tích hợp Knowledge Base vào quá trình tạo nội dung từ mô hình.
-
-- Bedrock Agents: Xây dựng các quy trình làm việc đa bước và tích hợp các công cụ trong Amazon Bedrock.
-
-- Guardrails: Các biện pháp đảm bảo tính an toàn và lọc nội dung khi sử dụng Generative AI.
-
-#### Live Demo – Generative AI Chatbot with Bedrock: Trình diễn xây dựng một chatbot sử dụng Amazon Bedrock.
-
-### Những Gì Học Được
-
-#### Tư duy thiết kế với AI/ML:
-
-- Amazon SageMaker là nền tảng chủ lực hỗ trợ toàn bộ vòng đời mô hình, từ việc chuẩn bị dữ liệu đến triển khai và giám sát mô hình.
-
-- Prompt Engineering: Làm thế nào để tối ưu hóa các mô hình Generative AI bằng các kỹ thuật xây dựng câu lệnh hiệu quả.
-
-- MLOps: Cách quản lý và tự động hóa quá trình huấn luyện, triển khai và giám sát các mô hình AI trong môi trường sản xuất.
-
-- Generative AI: Tìm hiểu về các mô hình nền tảng và cách chúng có thể tạo ra nội dung sáng tạo và chatbot thông minh.
-
-#### Kiến trúc AI/ML:
-
-- Foundation Models: Sự khác biệt giữa các mô hình như Claude, Llama, và Titan, và cách lựa chọn mô hình phù hợp với yêu cầu cụ thể của dự án.
-
-- RAG (Retrieval-Augmented Generation): Hiểu về cách kiến trúc RAG hoạt động và cách tích hợp kiến thức từ cơ sở dữ liệu vào quy trình tạo ra nội dung.
-
-- Bedrock Agents: Hướng dẫn xây dựng các quy trình làm việc phức tạp với các công cụ tích hợp sẵn.
-
-### Ứng Dụng Vào Công Việc
-
-- Áp dụng Amazon SageMaker: Tích hợp các công cụ của SageMaker để chuẩn bị dữ liệu, huấn luyện và triển khai mô hình AI trong các dự án hiện tại.
-
-- Xây dựng Generative AI Chatbot: Sử dụng Amazon Bedrock để phát triển chatbot và các ứng dụng sử dụng mô hình Generative AI cho các dự án dịch vụ khách hàng hoặc trợ lý ảo.
-
-- Tối ưu hóa mô hình AI/ML với Prompt Engineering: Áp dụng kỹ thuật prompt engineering trong việc tối ưu hóa mô hình AI để tạo ra kết quả chính xác và hiệu quả hơn.
-
-- MLOps: Triển khai MLOps trong môi trường công ty để tự động hóa quy trình huấn luyện và giám sát mô hình AI, giúp tăng hiệu quả và giảm thiểu rủi ro.
-
-### Trải nghiệm trong event
-
-- Học hỏi từ các chuyên gia AWS: Các diễn giả chia sẻ kiến thức chuyên sâu về AI/ML và Generative AI, giúp tôi hiểu rõ hơn về cách sử dụng các công cụ của AWS để phát triển mô hình.
-
-- Trình diễn trực tiếp: Tham gia vào các buổi demo thực tế về SageMaker và Amazon Bedrock, qua đó giúp tôi hình dung cách xây dựng và triển khai các mô hình AI trong môi trường thực tế.
-
-- Kết nối và trao đổi: Sự kiện giúp tôi kết nối với những người tham gia khác và các chuyên gia, mở rộng mối quan hệ và trao đổi kinh nghiệm về AI/ML.
-
-### Kết luận
-
-Sự kiện “AI/ML/GenAI on AWS” đã cung cấp cho tôi những kiến thức quan trọng về các công nghệ mới trong AI/ML, đặc biệt là về Generative AI và các công cụ AWS hỗ trợ như SageMaker và Amazon Bedrock. Các kỹ thuật Prompt Engineering và MLOps cũng đã giúp tôi nhận ra các bước cần thiết để đưa các mô hình AI từ ý tưởng đến sản phẩm thực tế.
+### ​✨ Lời kết
+​Sự kiện Kick-off hôm nay chính là bước khởi đầu cho hành trình AWS Builders – nơi các bạn sinh viên không chỉ tiếp cận công nghệ điện toán đám mây tiên tiến nhất, mà còn được truyền cảm hứng, kết nối cùng chuyên gia và mở rộng cơ hội nghề nghiệp.

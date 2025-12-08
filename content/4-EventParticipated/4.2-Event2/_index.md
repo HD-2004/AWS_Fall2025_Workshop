@@ -1,143 +1,108 @@
-
 ---
 title: "Event 2"
-date: 2025-09-17
+date: 2025-10-03
 weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-
-# Summary Report: “DevOps on AWS” Event
+# Summary Report: “AI-Driven Development Life Cycle: Reimagining Software Engineering” Event
 
 ### Event Objectives
 
-- Understand DevOps culture and mindset: Introduce the core principles of DevOps, emphasizing collaboration, automation, and continuous improvement.
+- Explore the AI-Driven Development Life Cycle and how AI is transforming modern software development processes.
+  
+- Learn how Amazon Q Developer and Kiro support developers in requirement analysis, code generation, testing, and performance optimization.
+  
+- Identify real-world applications of AI in software development in Vietnam: increased productivity, reduced errors, and improved deployment speed.
+  
+- Explore the stages of the AI-driven software development life cycle: Requirement → Design → Coding → Testing → Deployment → Improvement.
 
-- Learn about AWS DevOps tools: Dive into AWS services that support DevOps practices, including CI/CD pipelines, Infrastructure as Code (IaC), containerization, and monitoring.
+### Key Content
 
-- Explore DevOps best practices: Understand key metrics like DORA and MTTR, and learn best practices for deployment, incident management, and observability.
+#### Opening & Software Engineering Foundation
 
-- Demonstrate real-world use cases: Showcase AWS DevOps tools through demos and case studies, illustrating how these tools can be applied to various scenarios.
+- Overview of the transition from Traditional Software Development to AI-Driven Development.
 
-### Key Highlights
+- Core principles of software development when applying AI: transparency, verifiability, and effective collaboration between humans and AI models.
 
-#### Welcome & DevOps Mindset
+- AI-Augmented Engineer: a model where developers leverage AI to increase productivity and reduce development time.
 
-- Recap of AI/ML session: A brief review of the previous session on AI/ML.
+- Challenges faced by Vietnamese companies in adopting AI for Software Engineering: workflow adaptation, output quality, and integration with existing systems.
 
-- DevOps culture and principles: Introduction to the cultural shift towards collaboration, automation, and continuous delivery.
+#### Pillar 1 — AI-Driven Development Life Cycle overview and Amazon Q Developer demonstration
 
-- Benefits and key metrics: Overview of key DevOps metrics such as DORA (DevOps Research and Assessment), MTTR (Mean Time to Recovery), and deployment frequency. 
+- Detailed introduction of the AI-Driven SDLC, including requirement analysis, design, code generation, automated testing, deployment, and continuous improvement.
 
-#### AWS DevOps Services – CI/CD Pipeline
+- Amazon Q Developer:
+  - Automatically generates code from technical specifications.
+  - Suggests bug fixes, analyzes logs, and provides improvement recommendations.
+  - Generates test cases and documentation automatically.
+  - Supports architecture generation and AWS service–related code.
 
-- Source Control: Introduction to AWS CodeCommit and Git strategies like GitFlow and Trunk-based development.
+- Mini Demo: Using Amazon Q Developer to build APIs, write backend code, generate unit tests, and optimize code in real time.
 
-- Build & Test: Setting up AWS CodeBuild for automated builds and testing in CI/CD pipelines.
+#### Pillar 2 — Kiro Demonstration
 
-- Deployment: Learn about AWS CodeDeploy, with strategies for Blue/Green, Canary, and Rolling updates.
+- Introduction to Kiro – an AI assistant designed for enterprise Software Engineering workflows.
 
-- Orchestration: AWS CodePipeline for automating the CI/CD pipeline from source to deployment.
+- Continuous analysis and assistance:
+  - Analyzes backlog items, requirement documents, and Agile processes.
+  - Suggests architectures, technical solutions, and user stories.
+  - Optimizes development workflows across Dev – QA – Ops.
 
-- Demo: Full walkthrough of a complete CI/CD pipeline setup using AWS services. 
+- Workflow automation:
+  - Generates Technical Specifications.
+  - Recommends codebase improvements and CI/CD process enhancements.
+  - Helps track progress and identify bottlenecks.
 
-#### Infrastructure as Code (IaC)
+- Mini Demo: Using Kiro to analyze requirements and generate design documents and development plans.
 
-- AWS CloudFormation: Overview of CloudFormation templates, stacks, and drift detection to manage infrastructure as code.
+#### Summary & Q&A
 
-- AWS CDK (Cloud Development Kit): Introduction to the AWS CDK, with reusable patterns and language support.
+- Summary of two pillars: how AI supports the entire software development life cycle from analysis to deployment.
 
-- Demo: Deploying infrastructure using CloudFormation and CDK.
+- Common challenges for Vietnamese companies: over-reliance on AI, inconsistent output quality, and the need for developer evaluation skills.
 
-- Discussion: Choosing between CloudFormation and CDK for IaC implementation. 
+- Learning path: Amazon Q Developer, AWS AI Practitioner, Developer Associate, and specialized courses in GenAI for Software Engineering.
 
-#### Container Services on AWS
+### Key Takeaways
 
-- Docker Fundamentals: An introduction to Docker, microservices, and containerization.
+#### Overview of AI-Driven Development
 
-- Amazon ECR: Learn about Elastic Container Registry (ECR) for image storage, scanning, and lifecycle policies.
+- Gained a clear understanding of how AI is reshaping the software development process, from requirement analysis to deployment and maintenance.
+- Recognized the “AI-Augmented Engineer” model—where AI assists developers in accelerating development, ensuring code quality, and reducing errors.
 
-- Amazon ECS & EKS: Explore deployment strategies, scaling, and orchestration with Elastic Container Service (ECS) and Elastic Kubernetes Service (EKS).
+#### Amazon Q Developer
 
-- AWS App Runner: Simplified container deployment using AWS App Runner.
+- Learned to use Amazon Q Developer to generate source code from descriptions, helping speed up coding and reduce repetitive work.
+- Understood how Q Developer interprets codebases, proposes refactoring, generates test cases, and analyzes errors.
+- Practiced mini-demos involving generating APIs, handling backend logic, and automatically creating tests using AI.
 
-- Demo & Case Study: Comparison of microservices deployment using ECS, EKS, and App Runner.
+#### Kiro and Engineering Process
 
-#### Monitoring & Observability
+- Understood how Kiro assists engineering teams in managing the development life cycle: planning, requirement analysis, documentation generation, and architecture recommendations.
+- Observed demos where Kiro analyzes backlogs, generates user stories, and proposes suitable technical solutions.
+- Recognized how AI improves collaboration between Dev – QA – Ops.
 
-- CloudWatch: Setup and usage of AWS CloudWatch for metrics, logs, alarms, and dashboards.
+#### AI-Driven Software Development Life Cycle
 
-- AWS X-Ray: Introduction to AWS X-Ray for distributed tracing and performance insights across microservices.
+- Understood all major stages: Requirement → Design → Coding → Testing → Deployment → Improvement and how AI contributes to each.
+- Learned how AI supports automated testing and continuous quality monitoring.
 
-- Demo: Full-stack observability setup with CloudWatch and X-Ray for monitoring application health.
+### Application to Work
 
-- Best Practices: Tips on alerting, dashboard setup, and creating effective on-call processes.
+- Applied AI to write code faster, reduce bugs, and increase efficiency during feature development.
+- Used tools like Q Developer to analyze logs, debug, and optimize code performance.
+- Increased productivity in writing technical documentation (design docs, user stories) with AI.
+- Automated repetitive tasks such as refactoring, test writing, and code reviewing.
 
-#### DevOps Best Practices & Case Studies
+### Event Experience
 
-- Deployment Strategies: Discuss advanced deployment strategies such as Feature flags and A/B testing for better control over application release.
-
-- Automated Testing and CI/CD Integration: How to integrate automated testing into your CI/CD pipelines for efficient testing and deployment.
-
-- Incident Management and Postmortems: Best practices for handling incidents and conducting postmortem analyses to prevent future issues.
-
-- Case Studies: Real-world examples of DevOps transformations in both startups and enterprises.
-
-#### Q&A & Wrap-up
-
-- DevOps Career Pathways: Discuss various career opportunities in the DevOps field and how to develop the necessary skills.
-
-- AWS Certification Roadmap: Overview of AWS certifications related to DevOps and how to prepare for them.
-
-### What I Learned
-
-#### DevOps Culture and Principles:
-
-- DevOps Mindset: The importance of collaboration between development and operations teams, fostering a culture of continuous improvement.
-
-- Key Metrics: Understanding of DORA, MTTR, and deployment frequency as measures of DevOps success and efficiency.
-
-#### CI/CD Pipeline with AWS:
-
-- AWS CodeCommit: Best practices for managing source code using AWS’s version control system.
-
-- CodeBuild & CodeDeploy: How to configure automated build and deployment pipelines with AWS tools.
-
-- CodePipeline Automation: The role of AWS CodePipeline in automating the entire software delivery lifecycle.
-
-#### Infrastructure as Code (IaC):
-
-- AWS CloudFormation vs CDK: The benefits of using CloudFormation for managing resources declaratively, compared to the flexibility of AWS CDK for more programmatic infrastructure management.
-
-#### Containerization on AWS:
-
-- ECR, ECS, and EKS: How to manage container images and deploy containerized applications at scale using AWS services.
-
-- AWS App Runner: The ease of deploying applications using AWS App Runner for simpler containerization needs.
-
-#### Monitoring and Observability:
-
-- CloudWatch & X-Ray: How to implement full-stack observability in a microservices architecture using AWS CloudWatch and X-Ray for better performance tracking and issue resolution.
-
-### Application to My Work
-
-- CI/CD Pipeline Setup: Implement a full CI/CD pipeline using AWS CodePipeline, CodeBuild, and CodeDeploy to automate the deployment process in my current projects.
-
-- IaC with AWS CDK: Use AWS CDK for creating reusable infrastructure patterns and simplifying the management of cloud resources in my organization.
-
-- Containerization with ECS & EKS: Deploy microservices using ECS and EKS, focusing on scaling and orchestration for better efficiency.
-
-- Implement Observability: Set up CloudWatch and X-Ray for monitoring the health of applications in production and use insights to improve performance.
-
-### Experience at the Event
-
-- Learning from Experts: The speakers shared in-depth knowledge about DevOps principles, AWS DevOps tools, and real-world case studies, which helped me understand the implementation of DevOps practices in various environments.
-
-- Hands-on Demos: Participating in live demos and walking through the setup of CI/CD pipelines, IaC deployment, and container orchestration gave me practical insights into implementing these tools in my work.
-
-- Networking and Collaboration: The event allowed me to network with fellow professionals, exchange experiences, and gain insights into how other teams are implementing DevOps at scale.
+- Hands-on experience with demos from Amazon Q Developer and Kiro, gaining real-world insights into AI applications.
+- Learned from AWS experts about modern trends in Software Engineering combined with GenAI.
+- Connected with a community of developers applying AI in Vietnam.
 
 ### Conclusion
 
-The “DevOps on AWS” event provided valuable insights into the world of DevOps and how AWS services can facilitate the implementation of modern software development practices. From automating the CI/CD pipeline to managing infrastructure as code, the event covered essential tools and strategies that can be applied directly to my work. I am excited to integrate these practices into my daily workflow to enhance automation, efficiency, and collaboration within my team.
+The event “AI-Driven Development Life Cycle: Reimagining Software Engineering” provided deeper insight into applying AI in software development. With Amazon Q Developer and Kiro, developers can accelerate product development, improve code quality, and optimize the entire software development life cycle.
