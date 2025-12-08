@@ -6,14 +6,54 @@ chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
-#### Giới thiệu về VPC Endpoint
+#### Giới thiệu về dự án
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
+Workshop này trình bày kiến trúc và cách triển khai ứng dụng web **English Journey** –  
+một website học từ vựng tiếng Anh được xây dựng trên **nền tảng AWS**.
+
+Ứng dụng cho phép người học:
+
+- đăng ký / đăng nhập an toàn,
+- làm **bài kiểm tra trình độ** (A1–C1) trước khi bắt đầu học,
+- luyện từ vựng và làm quiz,
+- theo dõi quá trình học của bản thân.
+
+Về mặt hạ tầng, dự án minh họa cách kết hợp nhiều dịch vụ managed của AWS:
+- **AWS Amplify** làm nền tảng trung tâm cho backend và hosting của web app,
+- **Amazon Cognito** cho xác thực người dùng,
+- **AWS Lambda** cho nghiệp vụ backend (Level Test, Quiz, Vocabulary),
+- **Amazon DynamoDB** cho dữ liệu ứng dụng,
+- **Amazon S3 + CloudFront** cho nội dung tĩnh và file media,
+- **AWS Elemental MediaConvert** để xử lý audio/video,
+- **Amazon SNS** cho thông báo và cảnh báo,
+- **Amazon CloudWatch** cho log, metric và alarm,
+- **AWS WAF** để bảo vệ web trước một số tấn công phổ biến,
+- cùng **IAM Roles & Policies** để kiểm soát quyền truy cập giữa các thành phần.
+
+#### Mục tiêu của workshop
+
+Sau khi đọc phần workshop, người đọc có thể:
+
+1. Hiểu **kiến trúc tổng thể** của ứng dụng English Journey trên AWS.
+2. Giải thích vai trò của **Amplify** trong việc điều phối Cognito, Lambda, DynamoDB và S3.
+3. Mô tả được luồng xử lý của tính năng **kiểm tra trình độ**, từ frontend → Lambda → DynamoDB.
+4. Nắm được cách hệ thống xử lý **nội dung media** (audio/video) với S3 và MediaConvert.
+5. Hiểu cách **gửi thông báo** cho người dùng và **cảnh báo hệ thống** bằng SNS.
+6. Nhận thức tầm quan trọng của **CloudWatch** và **IAM** đối với giám sát và bảo mật.
 
 #### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
+Dự án này tận dụng các dịch vụ của AWS để xây dựng và triển khai ứng dụng:
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+    - WS Amplify: Dịch vụ hosting full-stack cho phép triển khai ứng dụng nhanh chóng và dễ dàng.
+
+    - AWS Lambda: Xử lý các tác vụ và logic của ứng dụng mà không cần quản lý máy chủ, giúp tiết kiệm chi phí và tài nguyên.
+
+    - Amazon DynamoDB: Cơ sở dữ liệu NoSQL dùng để lưu trữ dữ liệu người dùng, từ vựng và kết quả học tập.
+
+    - Amazon S3: Lưu trữ tài liệu học (video, âm thanh, hình ảnh) để hỗ trợ quá trình học tập.
+
+    - AWS MediaConvert: Xử lý và chuyển đổi các tập tin media như video hoặc âm thanh để sử dụng trong các bài học.
+
+    - Amazon CloudWatch: Giám sát hiệu suất và hoạt động của ứng dụng, cung cấp log và cảnh báo khi có sự cố.
+
+<img src="/images/5-Workshop/5.1-Workshop-overview/diagram1.png" alt="Overview" width="600">

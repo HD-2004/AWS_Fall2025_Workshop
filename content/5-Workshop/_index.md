@@ -5,27 +5,46 @@ weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# English Journey
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+**English Journey** is an innovative web application designed to help users learn English vocabulary in a structured and interactive way. This platform leverages various AWS services to provide a smooth learning experience, allowing users to track their progress, engage with dynamic content, and receive personalized feedback.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+#### Key Features:
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+**User Authentication:** Using Amazon Cognito, users can register, log in, and securely access their learning materials.
+
+**Interactive Learning Modules:** The app offers various interactive lessons to help users expand their vocabulary.
+
+**Progress Tracking:** Users can track their progress and completion of vocabulary lessons, with detailed reports generated through AWS Lambda and DynamoDB.
+
+**Notifications:** Real-time notifications via SNS will inform users about new lessons, progress milestones, account updates, or other updates.
+
+**Media Conversion:** If the platform includes video or audio content, AWS MediaConvert will handle media processing to ensure compatibility and smooth playback.
+
+**Content Storage:** All learning materials are securely stored in Amazon S3 with proper access control.
+
+**Web Security:** To protect the platform, AWS WAF ensures the application is protected from common web threats.
+
+**Monitoring and Alerts:** AWS CloudWatch is used to monitor platform performance, with alerts configured for potential issues.
+
+#### Technologies Used:
+
+**Frontend:** Built using modern web technologies, ensuring a smooth and responsive user experience.
+
+**Backend:** Powered by AWS services like Lambda and DynamoDB, ensuring scalability and performance.
+
+**Storage:** All data and media content are securely stored in Amazon S3.
 
 #### Content
 
-1. [Workshop overview](5.1-Workshop-overview)
+1. [Workshop overview](5.1-Workshop-overview/)
 2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+3. [Create Amplify](5.3-Create%20Amplify/)
+4. [MediaConvert](5.4-Create%20MediaConvert/)
+5. [SNS](5.5-Create%20SNS/)
+6. [CloudWatch](5.6-Create%20Cloudwatch/)
+7. [IAM Roles - Policies](5.7-Create%20IAM%20Roles-Policies/)
+8. [Clean up](5.8-Cleanup/)
