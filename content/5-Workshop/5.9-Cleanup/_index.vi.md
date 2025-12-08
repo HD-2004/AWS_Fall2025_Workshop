@@ -24,7 +24,7 @@ Chỉ nên thực hiện bước này khi bạn đã hoàn tất việc thử ng
 Khi xoá Amplify app:
 
 - Amplify sẽ tự động xoá phần **frontend hosting**,
-- và thường xoá luôn các **backend stack** mà Amplify đã tạo (Cognito, Lambda, DynamoDB, S3),  
+- và thường xoá luôn các **backend stack** mà Amplify đã tạo (Cognito, Lambda, DynamoDB),  
   trừ khi bạn chọn giữ lại chúng trong quá trình xoá.
 
 Hãy đọc kỹ nội dung trong hộp thoại xác nhận để tránh xoá nhầm tài nguyên quan trọng.
@@ -45,12 +45,7 @@ Trong AWS console, tại đúng Region workshop, hãy kiểm tra các dịch v�
 - **DynamoDB**  
   - Xoá các bảng DynamoDB chỉ dùng cho dữ liệu workshop (tiến độ học, câu hỏi, từ vựng, …) nếu bạn không còn cần.
 
-- **S3**  
-  - Xoá các S3 bucket dùng riêng cho workshop (chứa nội dung bài học, media, file tạm, …).  
-  - Cẩn thận không xoá các bucket dùng chung hoặc môi trường production.
 
-- **MediaConvert**  
-  - Xoá các **job template**, **queue** hoặc **endpoint** được tạo cho workshop (nếu có).
 
 ---
 
@@ -73,16 +68,12 @@ Nếu bạn đã yêu cầu **thoát khỏi chế độ sandbox của SES** ch�
 1. Mở console **CloudWatch**.
 2. Ở mục **Log groups**, xoá:
    - các log group của Lambda function thuộc English Journey,
-   - log group của MediaConvert jobs dùng trong workshop.
-3. Ở mục **Alarms**, xoá:
-   - các alarm giám sát tài nguyên chỉ dùng cho workshop (Lambda, DynamoDB, SES),
-   - các alarm test bạn đã tạo trong quá trình thực hành.
 
-### AWS WAF (nếu có dùng)
+### AWS WAF
 
 Nếu bạn đã cấu hình một **WAF Web ACL** riêng cho frontend của English Journey:
 
-1. Mở console **AWS WAF & Shield**.
+1. Mở console **AWS WAF**.
 2. Tìm **Web ACL** gắn với CloudFront distribution hoặc Amplify app của workshop.
 3. Nếu Web ACL này chỉ phục vụ riêng workshop, bạn có thể xoá nó.
 
@@ -93,7 +84,7 @@ Nếu bạn đã cấu hình một **WAF Web ACL** riêng cho frontend của Eng
 Cuối cùng, hãy rà soát **IAM** để đảm bảo không còn role/policy nào bị “mồ côi”:
 
 1. Trong console **IAM**, vào mục **Roles**:
-   - Tìm các role được tạo chỉ cho workshop (ví dụ: các Lambda execution role tuỳ chỉnh, MediaConvert service role, hoặc role có tên chứa English Journey / workshop).
+   - Tìm các role được tạo chỉ cho workshop (ví dụ: các Lambda execution role tuỳ chỉnh, hoặc role có tên chứa English Journey / workshop).
    - Trước khi xoá, hãy kiểm tra chắc chắn không còn Lambda, dịch vụ hay người dùng nào đang dùng role đó.
 
 2. Trong mục **Policies**:

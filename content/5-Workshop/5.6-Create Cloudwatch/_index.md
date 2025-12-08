@@ -13,23 +13,22 @@ To understand how the application behaves in production and to be able to react 
 
 - collecting logs from Lambda functions,
 - monitoring metrics (invocations, errors, throttles, latency),
-- triggering alarms that send notifications through SNS.
 
 ---
 
 ## 5.6.1 CloudWatch Logs for Lambda and API
 
 By default, every Lambda function created by Amplify writes logs to **CloudWatch Logs**.  
-In the context of this project we use these logs to:
+In this project, logs are used to:
 
-- trace requests for:
-  - placement tests,
-  - quiz submissions,
-  - vocabulary and dictionary calls,
-- debug issues such as invalid input, permission errors, or timeouts,
-- record important events (for example when MediaConvert jobs are created).
+- Track requests for:
+  - Level test submissions,
+  - Quiz submissions,
+  - Dictionary / vocabulary lookups,
+- Debug input errors, permission (IAM) errors or timeouts,
+- Record important application events.
 
-In addition to the default logging, some functions write structured JSON logs, which makes it easier to search by `userId`, `requestId` or `feature`.
+In addition to the default logs, some functions write structured JSON logs, which makes it easier to search by `userId`, `requestId` or `feature`.
 
 ---
 
@@ -50,50 +49,24 @@ For the workshop we focus on a few **key metrics**:
 
 ---
 
-## 5.6.3 CloudWatch Dashboards (optional)
+## 5.6.3 CloudWatch Dashboard (optional)
 
-To have a quick overview of the system we created a small **CloudWatch Dashboard** that shows:
+To quickly observe the system health, the team creates a small **CloudWatch Dashboard** showing:
 
-- a graph of Lambda error rate over time,
-- duration of the LevelTest and Dictionary functions,
-- and, optionally, blocked requests reported by AWS WAF.
+- A chart of Lambda error rate over time,
+- Execution duration of the LevelTest and Dictionary functions,
+- (Optional) Number of requests blocked by AWS WAF.
 
-This is not strictly required for the workshop, but it helps visualize the impact when students actively use the application.
-
----
-
-## 5.6.4 CloudWatch Alarms integrated with SNS
-
-The most important part of the monitoring setup is **CloudWatch Alarms**.
-
-Examples of alarms configured in this project:
-
-1. **Lambda error alarm**
-
-   - Monitors the `Errors` metric of critical functions (LevelTest, MyLearning, Dictionary).
-   - Triggers when the error count is above a small threshold for several consecutive periods.
-   - Action: publish to the `english-journey-system-alerts` SNS topic.
-
-2. **DynamoDB throttling alarm**
-
-   - Monitors `ThrottledRequests` for the main tables.
-   - Indicates that provisioned capacity or on-demand limits are being exceeded.
-   - Also sends notifications via SNS.
-
-3. **MediaConvert failure alarm** (optional)
-
-   - Looks at error metrics or dead-letter queues related to MediaConvert job processing.
-
-Thanks to these alarms, any serious issue (for example a broken Lambda deployment) results in an email notification via SNS, allowing the team to investigate quickly.
+The dashboard is not mandatory for the workshop, but it helps illustrate the system behavior when many students are using the application.
 
 ---
+
 
 ## Summary
 
-CloudWatch completes the observability story for English Journey by providing:
+CloudWatch completes the monitoring story for English Journey by providing:
 
-- **logs** for troubleshooting,
-- **metrics and dashboards** for understanding behavior over time,
-- **alarms** that connect directly to SNS topics for proactive alerts.
+- **Logs** for analysis and debugging,
+- **Metrics & dashboards** to observe trends,
 
-Together with Amplify, SNS and WAF, this gives a basic but robust operational setup for the workshop project.
+Combined with Amplify, SES and WAF, this gives a reasonably robust operational setup for this workshop project.

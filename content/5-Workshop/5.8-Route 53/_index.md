@@ -6,106 +6,53 @@ chapter : false
 pre : " <b> 5.8. </b> "
 ---
 
-## Goal
 
-This section explains how **Amazon Route 53** is used in the English Journey architecture
-to provide a **custom domain** for the web application and to route traffic to the
-Amplify-hosted frontend protected by AWS WAF.
 
----
+## 5.8 Configure Amazon Route 53 (Custom Domain)
 
-## 5.8.1 Role of Route 53 in the architecture
+In this step we connect the Amplify-hosted **English Journey** frontend to a custom
+domain managed by **Amazon Route 53**.
 
-In the high-level diagram, Route 53 sits between the **end user** and the **web frontend**:
+> 🔗 **Domain used in this workshop**
+>
+> For the demo environment we use the domain  
+> **englishjourney.xyz** – the final site is available at:  
+> `https://www.englishjourney.xyz/`
+>
 
-- The app is hosted by **AWS Amplify** (which internally uses an S3 bucket + CloudFront).
-- We register or use an existing **domain name**, such as `englishjourney.example.com`.
-- **Route 53** manages DNS for this domain and creates an **Alias record** that points to
-  the Amplify application (or its underlying CloudFront distribution).
-- Optionally, the same domain is associated with **AWS WAF** to filter malicious requests
-  before they reach the app.
-
-Thanks to Route 53, users access the site through a friendly URL instead of the default
-Amplify URL.
 
 ---
 
-## 5.8.2 Domain and hosted zone
+### 5.8.1 Create / verify the hosted zone
 
-To use Route 53, we first need a **hosted zone** for the domain.
-
-There are two options:
-
-1. **Register a new domain in Route 53**
-   - e.g. `englishjourney.workshop.com`.
-   - Route 53 automatically creates a public hosted zone with NS and SOA records.
-
-2. **Use an existing domain from another registrar**
-   - Create a **public hosted zone** in Route 53 with the same domain name.
-   - Update the domain’s name servers at the registrar to point to the Route 53 NS records.
-
-In both cases, English Journey uses this hosted zone to create DNS records for the app.
+1. Open the **Route 53** console → *Hosted zones* → **Create hosted zone**.
+2. Enter your domain name, e.g. **englishjourney.xyz**, and keep type = *Public hosted zone*.
+3. Route 53 creates a set of **NS** and **SOA** records for the zone.
+4. If the domain is registered elsewhere, copy the Route 53 **NS** records to your registrar so that DNS is delegated to Route 53.
 
 ---
 
-## 5.8.3 Linking the Amplify app to the custom domain
+### 5.8.2 Connect the domain in AWS Amplify
 
-Once the domain/hosted zone is ready:
+1. Go to the **AWS Amplify** console → select your **English Journey** app.
+2. In the left menu choose **Domain management** → **Add domain**.
+3. Select the hosted zone **englishjourney.xyz**.
+4. Map the root and sub-paths, for example:
 
-1. Open the **AWS Amplify console** for the English Journey app.
-2. Choose **Domain management → Add domain**.
-3. Enter the domain name managed by Route 53  
-   (e.g. `englishjourney.example.com`).
-4. Amplify suggests one or more **subdomains**:
-   - `englishjourney.example.com` → main production branch,
-   - optionally `dev.englishjourney.example.com` → development branch.
-5. Choose the branches you want to map and confirm.
+   - `englishjourney.xyz` → main branch (production)
+   - `www.englishjourney.xyz` → redirect to root
 
-Amplify then:
-
-- creates the necessary **A/AAAA Alias records** in Route 53,
-- requests or attaches an **AWS Certificate Manager (ACM)** certificate for HTTPS,
-- associates the domain with the underlying CloudFront distribution.
-
-From this point, users can access the site via the custom domain instead of the Amplify URL.
+5. Amplify automatically creates the required **A / AAAA** and **CNAME** records in Route 53.
 
 ---
 
-## 5.8.4 Example DNS records in Route 53
+### 5.8.3 Test the site
 
-In the hosted zone you will typically see records like:
+1. Wait for DNS and SSL provisioning to complete (a few minutes).
+2. Open a browser and navigate to:
 
-- `A` (Alias) – `englishjourney.example.com` → CloudFront / Amplify domain
-- `AAAA` (Alias) – IPv6 equivalent (optional)
-- `CNAME` – `www.englishjourney.example.com` → `englishjourney.example.com` (optional redirect)
-- The default `NS` and `SOA` records created with the hosted zone.
+   - `https://www.englishjourney.xyz/`
 
-These records are managed automatically by Amplify in the workshop,  
-but they appear in Route 53 so that DNS resolution is fully controlled by our account.
+3. Verify that the English Journey homepage is served correctly over HTTPS.
+4. Note this URL in your report / slides as the public entry point of the workshop application.
 
----
-
-## 5.8.5 Integration with AWS WAF
-
-If the application uses **AWS WAF** (as shown in the architecture):
-
-- WAF is attached to the **CloudFront distribution** behind Amplify.
-- Because Route 53 routes traffic to that distribution via Alias records,
-  all traffic to the custom domain automatically passes through WAF.
-- WAF can block common attacks (SQL injection, XSS, bad bots) before requests reach the Amplify app.
-
-Route 53 itself does not inspect traffic, but it is the entry point that connects
-the custom domain → CloudFront/WAF → Amplify.
-
----
-
-## 5.8.6 Summary
-
-Route 53 provides:
-
-- **Human-readable URLs** for the English Journey site,
-- **DNS control** within the same AWS account as the rest of the architecture,
-- seamless integration with **Amplify, CloudFront, ACM and WAF**.
-
-Together with Amplify, this allows the workshop to present a realistic,
-production-like configuration for a modern web application.

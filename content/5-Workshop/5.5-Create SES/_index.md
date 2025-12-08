@@ -6,24 +6,23 @@ chapter : false
 pre : " <b> 5.5. </b> "
 ---
 
-In this section, you will replace the notification channel of the **English Journey** application from Amazon SNS to **Amazon Simple Email Service (SES)**.
+## Goal
+- SES will be used to send transactional emails to learners
 
-SES will be used to send transactional emails to learners, for example:
-
-- Welcome email after first sign-in  
-- Daily / weekly learning reminders  
-- Level-test results or new-lesson notifications  
+- It can later be extended to:
+  - Send welcome emails when an account is created.
+  - Send study reminder emails.
 
 > **Note:** SES is a regional service. Make sure you are working in the same AWS Region that you used for Amplify, Lambda and DynamoDB.
 
 ---
 
-## 5.5.1 – Open Amazon SES console
+## 5.5.1 – Open the Amazon SES console
 
-1. In the AWS Management Console, search for **“SES”**.  
-2. Choose **Amazon Simple Email Service**.  
-3. At the top-right corner, verify the **Region** (for example: `ap-southeast-1`).  
-4. If SES opens in another Region, switch back to the Region of your workshop environment.
+1. From the AWS Management Console, type **“SES”** in the search box.  
+2. Select **Amazon Simple Email Service**.  
+3. Check the **Region** in the top-right corner (for example: `ap-southeast-1`).  
+4. If SES is in a different Region, switch to the Region used for this workshop environment.
 
 ---
 
@@ -45,15 +44,15 @@ From now on, SES will only allow sending emails **from** and **to** verified ide
 
 ---
 
-## 5.5.3 – (Optional) Request production access
+## 5.5.3 – (Optional) Move out of Sandbox mode
 
-If you want to send emails to unverified recipients (for example, real learners), you must move your account out of the **SES sandbox**:
+If later you want to send emails to real learners (unverified addresses), you must move your SES account out of sandbox mode:
 
-1. In the SES console, choose **Account dashboard**.  
+1. In the SES console, go to **Account dashboard**.  
 2. Under **Your account details**, check the **Account status**.  
-3. If it is still **Sandbox**, click **Request production access** and follow the wizard.  
+3. If it is still **Sandbox**, click **Request production access** and follow the instructions.
 
-> For this workshop you can stay in sandbox mode as long as you send mail only between verified email addresses.
+> Within the scope of this workshop, you can stay in sandbox mode as long as you only send emails between verified addresses.
 
 ---
 

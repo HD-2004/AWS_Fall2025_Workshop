@@ -14,38 +14,37 @@ You should only delete these resources when you have finished experimenting with
 
 ---
 
-## 5.9.1 – Clean up Amplify app and frontend hosting
+## 5.9.1 – Delete the Amplify app and front-end hosting
 
 1. Open the **Amplify** console in the same Region used for the workshop.
-2. Select the **Amplify app** that hosts the English Journey frontend.
-3. Choose **Actions → Delete app** (or **Delete** from the app details page).
-4. Confirm the deletion.
+2. Select the **Amplify app** that is hosting the English Journey front end.
+3. Choose **Actions → Delete app** (or the **Delete** button in the app details page).
+4. Confirm the deletion as instructed.
 
-Deleting the Amplify app will automatically remove the connected **frontend hosting**, and the **backend stacks** created by Amplify (Cognito, Lambda, DynamoDB, S3) – unless you chose to keep them during deletion.  
-Check the confirmation dialog carefully and follow the prompts.
+When you delete the Amplify app:
+
+- Amplify automatically removes the **front-end hosting**,
+- And usually deletes the **backend stacks** it created (Cognito, Lambda, DynamoDB),  
+  unless you explicitly choose to keep them during the deletion process.
+
+Carefully read the confirmation dialog to avoid deleting important resources by mistake.
 
 ---
 
-## 5.9.2 – Clean up backend resources that remain
+## 5.9.2 – Delete any remaining back-end resources
 
-Depending on how you created the backend, some resources may still exist after deleting the Amplify app.  
-In the AWS console, verify the following services in the workshop Region:
+Depending on how you created the back end, there may still be some resources left after deleting the Amplify app.  
+In the AWS console, in the workshop Region, check the following services:
 
 - **Cognito**  
-  - Remove any **User Pools** or **Identity Pools** created only for the workshop.
+  - Delete any **User Pools** or **Identity Pools** that were created specifically for the workshop.
 
 - **Lambda**  
-  - Delete Lambda functions used exclusively for English Journey (for example: test-level function, daily reminders, vocabulary utilities).
+  - Delete Lambda functions that only serve English Journey (for example: level test handlers, daily reminders, vocabulary processing).
 
 - **DynamoDB**  
-  - Delete DynamoDB tables that were created for workshop data (users progress, questions, vocabulary, etc.) if you no longer need them.
+  - Delete DynamoDB tables that were used only for workshop data (learning progress, questions, vocabulary, …) if you no longer need them.
 
-- **S3**  
-  - Delete S3 buckets that were used only for this workshop (for example: lesson content, media assets, temporary exports).
-  - Be careful not to delete shared or production buckets.
-
-- **MediaConvert**  
-  - Remove **job templates**, **queues** or **endpoints** that are dedicated to this workshop, if any.
 
 ---
 
@@ -66,18 +65,14 @@ If your account was moved **out of SES sandbox** only for the workshop, you may 
 ### CloudWatch
 
 1. Open the **CloudWatch** console.
-2. Under **Log groups**, delete log groups that belong only to:
-   - the English Journey Lambda functions,
-   - MediaConvert jobs used for this workshop.
-3. Under **Alarms**, delete:
-   - alarms that monitor workshop-only resources (Lambda, DynamoDB, SES),  
-   - any test alarms you created during the exercises.
+2. In **Log groups**, delete:
+   - Log groups for Lambda functions that belong to English Journey.
 
-### AWS WAF (if used)
+### AWS WAF
 
 If you deployed a dedicated **WAF Web ACL** for the English Journey frontend:
 
-1. Open the **AWS WAF & Shield** console.
+1. Open the **AWS WAF** console.
 2. Identify the **Web ACL** associated with the workshop CloudFront distribution or Amplify app.
 3. If the Web ACL is used exclusively for this workshop, delete it.
 
@@ -88,7 +83,7 @@ If you deployed a dedicated **WAF Web ACL** for the English Journey frontend:
 Finally, review **IAM** to ensure there are no unused roles or policies left behind:
 
 1. In the **IAM** console, go to **Roles**:
-   - Look for roles created only for this workshop (for example: custom Lambda execution roles, MediaConvert service roles, or roles with names that clearly reference English Journey or the workshop).
+   - Look for roles created only for this workshop (for example: custom Lambda execution roles, or roles with names that clearly reference English Journey or the workshop).
    - Before deleting a role, confirm that no Lambda function, service or user still depends on it.
 
 2. In **Policies**:

@@ -90,18 +90,6 @@ Using Amplify in this way keeps all table definitions in code and makes the depl
 
 ---
 
-## 5.3.6 Storage with S3
-
-Besides the S3 bucket used for hosting, the application also relies on S3 to store learning content:
-
-- images and illustrations used in lessons and quizzes,
-- audio files for listening or pronunciation exercises,
-- reading articles or other static resources.
-
-These buckets are created and referenced in the Amplify backend.  
-Lambda functions and the frontend access them through IAM roles that are automatically attached by Amplify.
-
----
 
 ## 5.3.7 Protection with AWS WAF
 
@@ -122,7 +110,6 @@ In summary, **Amplify** is the central service that creates and connects:
 - **Cognito** for authentication,
 - **Lambda** for backend logic,
 - **DynamoDB** for application data,
-- **S3 + CloudFront** for hosting and static content,
 - and integrates with **AWS WAF** for additional protection.
 
-The rest of the workshop (MediaConvert, SNS, CloudWatch, IAM policies, …) builds on top of this Amplify-managed backend.
+The rest of the workshop (SNS, CloudWatch, IAM policies, …) builds on top of this Amplify-managed backend.

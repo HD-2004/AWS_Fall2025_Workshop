@@ -25,7 +25,6 @@ In the architecture from sections 5.3–5.6, IAM is the glue that connects servi
 
 - **Amplify** uses IAM roles to deploy CloudFormation stacks and host the frontend.
 - **Lambda** functions use execution roles to access DynamoDB, S3 and SES (for sending emails).
-- **MediaConvert** assumes a service role to read/write media files in S3.
 - **CloudWatch** and **SES** rely on IAM so alarms and email notifications can be sent correctly.
 
 The design goal is that *each component only receives the minimum permissions it needs*.

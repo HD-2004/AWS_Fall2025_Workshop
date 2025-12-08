@@ -21,12 +21,10 @@ On the AWS side, the project demonstrates how to combine several managed service
 
 - **AWS Amplify** as the central platform for the web app backend and hosting,
 - **Amazon Cognito** for authentication,
-- **AWS Lambda** for backend logic (level test, quizzes, vocabulary),
+- **AWS Lambda** for backend logic (Level test, Quiz, Vocabulary),
 - **Amazon DynamoDB** for application data,
-- **Amazon S3 + CloudFront** for static content and media files,
-- **AWS Elemental MediaConvert** for processing audio/video,
-- **Amazon SES** for sending email notifications and alerts to learners (welcome emails, reminders, test results),
-- **Amazon CloudWatch** for logs, metrics and alarms,
+- **Amazon SES** for sending email notifications and alerts to learners (Account Verification),
+- **Amazon CloudWatch** for logs, metrics,
 - **AWS WAF** for basic web application protection,
 - and **IAM Roles & Policies** to control access between all components.
 
@@ -36,9 +34,8 @@ By the end of this workshop, a reader should be able to:
 1. Understand the **overall architecture** of the English Journey web app on AWS.
 2. Explain the role of **Amplify** and how it orchestrates Cognito, Lambda, DynamoDB and S3.
 3. Describe how the **level-test feature** connects frontend, Lambda and DynamoDB.
-4. See how **media content** (audio/video) is handled using S3 and MediaConvert.
-5. Understand how **notifications** and **system alerts** are delivered with SNS.
-6. Recognise the importance of **CloudWatch** and **IAM** for monitoring and security.
+4. Understand how **notifications** and **system alerts** are delivered via email using Amazon SES.
+5. Recognise the importance of **CloudWatch** and **IAM** for monitoring and security.
 
 #### Workshop Overview
 
@@ -52,9 +49,7 @@ This project leverages AWS services to build and deploy the application:
 
     Amazon S3: Stores learning materials (videos, audio, images) to support the learning process.
 
-    AWS MediaConvert: Processes and converts media files such as videos or audio for use in lessons.
-
     Amazon CloudWatch: Monitors the performance and operation of the application, providing logs and alerts in case of issues.
 
 
-!<img src="/images/5-Workshop/5.1-Workshop-overview/diagram1.png" alt="Overview" width="600">
+!<img src="/images/5-Workshop/5.1-Workshop-overview/architecture2.png" alt="Overview" width="600">

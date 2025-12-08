@@ -22,9 +22,7 @@ pre: " <b> 5. </b> "
 
 **Theo Dõi Tiến Độ:** Người dùng có thể theo dõi tiến độ và sự hoàn thành các bài học từ vựng, với báo cáo chi tiết được tạo ra thông qua AWS Lambda và DynamoDB.
 
-**Thông Báo:** Các thông báo thời gian thực qua SNS sẽ thông báo cho người dùng về các bài học mới, mốc tiến độ, tài khoản hoặc các cập nhật khác.
-
-**Chuyển Đổi Media:** Nếu nền tảng bao gồm nội dung video hoặc âm thanh, AWS MediaConvert sẽ xử lý việc chuyển đổi media để đảm bảo tính tương thích và phát lại mượt mà. (Phát triển trong tương lai)
+**Thông báo:** Hệ thống sử dụng Amazon SES để gửi email thông báo cho người dùng về bài học mới, các mốc tiến độ, cập nhật tài khoản và các thay đổi quan trọng khác.
 
 **Lưu Trữ Nội Dung:** Tất cả tài liệu học tập được lưu trữ an toàn trên Amazon S3 với các quyền truy cập kiểm soát chặt chẽ.
 
@@ -45,9 +43,11 @@ pre: " <b> 5. </b> "
 1. [Tổng quan về workshop](5.1-Workshop-overview/)
 2. [Các bước chuẩn bị](5.2-Prerequiste/)
 3. [Create Amplify](5.3-Create%20Amplify/)
-4. [MediaConvert](5.4-Create%20MediaConvert/)
+4. [AWS Cognito](5.4-AWS%20Cognito/)
 5. [Amazon SES để gửi email thông báo](5.5-Create%20SES/)
 6. [CloudWatch](5.6-Create%20Cloudwatch/)
 7. [IAM Roles - Policies](5.7-Create%20IAM%20Roles-Policies/)
 8. [Amazon Route 53](5.8-Route%2053/)
 9. [Clean up](5.9-Cleanup/)
+
+

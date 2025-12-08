@@ -6,14 +6,12 @@ chapter : false
 pre : " <b> 5.5. </b> "
 ---
 
+## Mục tiêu
+- SES sẽ được dùng để gửi các email xác thực cho học viên
+- Mở rộng sau này với:
+  - Email chào mừng tạo tài khoản
+  - Email nhắc nhở học tập
 
-Trong bước này, chúng ta sẽ thay kênh thông báo của ứng dụng **English Journey** từ Amazon SNS sang **Amazon Simple Email Service (SES)**.
-
-SES sẽ được dùng để gửi các email giao dịch cho học viên, ví dụ:
-
-- Email chào mừng khi đăng nhập lần đầu  
-- Nhắc học hàng ngày / hàng tuần  
-- Kết quả bài kiểm tra trình độ, hoặc thông báo có bài học mới  
 
 > **Lưu ý:** SES là dịch vụ theo vùng (Region). Hãy đảm bảo bạn đang thao tác đúng Region đã dùng cho Amplify, Lambda và DynamoDB.
 
