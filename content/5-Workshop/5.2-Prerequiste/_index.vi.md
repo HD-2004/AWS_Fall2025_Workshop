@@ -73,12 +73,11 @@ Gắn IAM permission policy sau vào tài khoản aws user của bạn để tri
       "Resource": "*"
     },
     {
-      "Sid": "SNSPermissions",
+      "Sid": "SESPermissions",
       "Effect": "Allow",
       "Action": [
-        "sns:Publish",
-        "sns:CreateTopic",
-        "sns:Subscribe"
+        "ses:SendEmail",
+        "ses:SendRawEmail"
       ],
       "Resource": "*"
     },
@@ -138,46 +137,42 @@ Báo cáo được viết sao cho vẫn có thể hiểu được **dù không t
 
 ---
 
-## Công cụ và dịch vụ (nếu triển khai thực tế)
+## Công cụ và dịch vụ
 
-Nếu muốn tái hiện workshop trên tài khoản AWS thật, cần có:
+Để có thể tái hiện workshop trong một môi trường thực tế, bạn sẽ cần các công cụ và dịch vụ sau:
 
 - Một **tài khoản AWS** với quyền tạo:
-  - Amplify App,
-  - Cognito User Pool,
-  - Lambda Function,
-  - DynamoDB Table,
-  - S3 Bucket,
-  - SNS Topic,
-  - CloudWatch Alarm,
-  - IAM Role và Policy.
+  - Ứng dụng Amplify,
+  - Cognito User Pools,
+  - Hàm Lambda,
+  - Bảng DynamoDB,
+  - S3 buckets,
+  - Các identity và configuration set của SES,
+  - CloudWatch alarms,
+  - IAM roles và policies.
 
-- **Node.js và npm** cài trên máy local  
+- **Node.js và npm** cài đặt trên máy local  
   (để chạy và build frontend React).
 
-- **AWS CLI** đã được cấu hình profile/credential phù hợp.
+- **AWS CLI** đã được cấu hình với IAM user hoặc role có đủ quyền.
 
-- Tuỳ chọn, công cụ **Amplify CLI / Gen 2**  
-  để định nghĩa hạ tầng bằng code và kết nối project với Amplify.
+- (Tuỳ chọn) **Amplify CLI / Gen 2 tooling**  
+  để định nghĩa hạ tầng bằng code và kết nối dự án với Amplify.
 
 ---
 
 ## Mã nguồn và cấu trúc dự án
 
-Dự án English Journey được tổ chức gồm:
+Dự án English Journey được tổ chức như sau:
 
-- **Frontend React** – các trang Level Test, Dictionary, Vocabulary, My Learning, v.v.
-- Backend được định nghĩa thông qua **Amplify** – bao gồm Cognito, Lambda, DynamoDB, S3.
-- Các thành phần bổ sung: **MediaConvert, SNS, CloudWatch, WAF** hỗ trợ media, thông báo, giám sát và bảo mật.
+- Một **frontend React** (các trang như Level Test, Dictionary, Vocabulary, My Learning),
+- Backend được định nghĩa thông qua **Amplify** (Cognito, Lambda, DynamoDB, S3),
+- Hạ tầng bổ sung cho **MediaConvert, SES (email), CloudWatch và WAF**.
 
-Trong website Hugo của workshop này, nhóm chỉ trình bày:
+Trong trang workshop Hugo này, chúng ta chỉ trình bày **các sơ đồ kiến trúc, phần giải thích và ví dụ mã nguồn**. Bạn không cần phải tạo thật các tài nguyên AWS để hiểu các quyết định thiết kế.
 
-- sơ đồ kiến trúc,
-- giải thích thiết kế,
-- và một số đoạn mã minh hoạ.
+Các mục tiếp theo (từ 5.3 trở đi) sẽ dựa trên các điều kiện tiên quyết này và giải thích chi tiết hơn từng nhóm dịch vụ AWS.
 
-Người đọc **không bắt buộc** phải tạo tài nguyên thật trên AWS để hiểu được nội dung.  
-Các mục tiếp theo (từ 5.3 trở đi) sẽ lần lượt đi sâu vào từng nhóm dịch vụ AWS dựa trên các điều kiện tiên quyết ở trên.
 
 
 

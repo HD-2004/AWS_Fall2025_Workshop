@@ -25,7 +25,7 @@ On the AWS side, the project demonstrates how to combine several managed service
 - **Amazon DynamoDB** for application data,
 - **Amazon S3 + CloudFront** for static content and media files,
 - **AWS Elemental MediaConvert** for processing audio/video,
-- **Amazon SNS** for notifications and alerts,
+- **Amazon SES** for sending email notifications and alerts to learners (welcome emails, reminders, test results),
 - **Amazon CloudWatch** for logs, metrics and alarms,
 - **AWS WAF** for basic web application protection,
 - and **IAM Roles & Policies** to control access between all components.

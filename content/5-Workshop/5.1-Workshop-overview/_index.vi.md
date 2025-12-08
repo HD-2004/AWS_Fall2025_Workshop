@@ -25,7 +25,7 @@ Về mặt hạ tầng, dự án minh họa cách kết hợp nhiều dịch v�
 - **Amazon DynamoDB** cho dữ liệu ứng dụng,
 - **Amazon S3 + CloudFront** cho nội dung tĩnh và file media,
 - **AWS Elemental MediaConvert** để xử lý audio/video,
-- **Amazon SNS** cho thông báo và cảnh báo,
+- **Amazon SES** để gửi email thông báo (chào mừng, nhắc học, kết quả kiểm tra, cảnh báo quan trọng),
 - **Amazon CloudWatch** cho log, metric và alarm,
 - **AWS WAF** để bảo vệ web trước một số tấn công phổ biến,
 - cùng **IAM Roles & Policies** để kiểm soát quyền truy cập giữa các thành phần.

@@ -73,15 +73,15 @@ Add the following IAM permission policy to your user account to deploy and clean
       "Resource": "*"
     },
     {
-      "Sid": "SNSPermissions",
+      "Sid": "SESPermissions",
       "Effect": "Allow",
       "Action": [
-        "sns:Publish",
-        "sns:CreateTopic",
-        "sns:Subscribe"
+        "ses:SendEmail",
+        "ses:SendRawEmail"
       ],
       "Resource": "*"
-    },
+    }
+
     {
       "Sid": "CloudWatchPermissions",
       "Effect": "Allow",
@@ -147,7 +147,7 @@ To reproduce the workshop in a real environment, the following tools and service
   - Lambda functions,
   - DynamoDB tables,
   - S3 buckets,
-  - SNS topics,
+  - SES identities and configuration sets,
   - CloudWatch alarms,
   - IAM roles and policies.
 
@@ -167,7 +167,7 @@ The English Journey project is organised as:
 
 - a **React frontend** (pages such as Level Test, Dictionary, Vocabulary, My Learning),
 - a backend defined via **Amplify** (Cognito, Lambda, DynamoDB, S3),
-- additional infrastructure for **MediaConvert, SNS, CloudWatch and WAF**.
+- additional infrastructure for **MediaConvert, SES (email), CloudWatch and WAF**.
 
 In this Hugo workshop site, we only present the **architecture diagrams, explanations and example code**. The actual AWS resources do not need to be created to understand the design decisions.
 
