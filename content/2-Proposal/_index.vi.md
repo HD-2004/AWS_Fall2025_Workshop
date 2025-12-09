@@ -25,7 +25,7 @@ Nền tảng Studying English Website giúp người học nâng cao kỹ năng 
 ### 3. Kiến trúc giải pháp  
 Kiến trúc giải pháp của Studying English Website dựa trên nền tảng serverless của AWS, sử dụng S3 để lưu trữ dữ liệu thô và dữ liệu đã xử lý, Amplify Gen 2 để triển khai giao diện web Route53 quản lý DNS và định tuyến, Cognito xác thực và quản lý người dùng, Secrets Manager bảo mật thông tin nhạy cảm, IAM quản lý quyền truy cập, Lambda xử lý logic serverless theo sự kiện, WAF bảo vệ ứng dụng khỏi tấn công tạo ra một hệ thống học tiếng Anh linh hoạt, cá nhân hóa, an toàn và dễ mở rộng.
 
-![Studying English Website Architecture](/images/2-Proposal/architecture.jpeg)
+![Studying English Website Architecture](/images/2-Proposal/architecture.png)
 
 *Dịch vụ AWS sử dụng*  
 - *AWS Amplify gen 2*: Lưu trữ giao diện web  
